@@ -1,0 +1,26 @@
+package com.chlee.design.exam01;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+public class ProductFactory <T extends Product> implements DataProvider<T> {
+	
+	private Collection<T> products;
+
+    public ProductFactory() {
+        products = new ArrayList<>();
+    }
+
+    // 제너릭 메서드 적용 (2)
+    public <P extends T> void addProduct(P product) {
+        products.add(product);
+    }
+
+	@Override
+	public Collection<T> getData() {
+		
+		return products;
+	}
+	
+
+}

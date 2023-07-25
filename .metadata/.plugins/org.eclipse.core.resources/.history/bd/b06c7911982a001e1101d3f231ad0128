@@ -1,0 +1,27 @@
+package com.chlee.design.exam01;
+
+import java.util.Collection;
+
+public class FactoryMain {
+
+		 // (3) 람다 표현식 적용
+	    public static void printProducts(DataProvider<? extends Product> provider) {
+	        Collection<? extends Product> products = provider.getData();
+	        products.forEach(Product::printInfo);
+	    }
+
+	    public static void main(String[] args) {
+	        ProductFactory<Product> productFactory = new ProductFactory<>();
+
+	        // 두 개의 콘크리트 클래스의 객체를 생성하여 팩토리에 추가합니다.
+	        productFactory.addProduct(new ConcreteProductA("Product A1"));
+	        productFactory.addProduct(new ConcreteProductA("Product A2"));
+	        productFactory.addProduct(new ConcreteProductB("Product B1"));
+
+	        // 팩토리로부터 데이터를 받아와 출력합니다.
+	        printProducts(productFactory);
+	    }
+		
+
+	}
+

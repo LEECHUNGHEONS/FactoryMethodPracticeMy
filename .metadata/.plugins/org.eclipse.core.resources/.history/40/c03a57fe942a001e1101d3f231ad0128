@@ -1,0 +1,5 @@
+package com.chlee.design.exam01;
+
+public class ProductFactory {
+
+}

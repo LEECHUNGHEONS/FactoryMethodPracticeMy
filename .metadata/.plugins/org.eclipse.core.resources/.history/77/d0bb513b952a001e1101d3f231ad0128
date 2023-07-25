@@ -1,0 +1,19 @@
+package com.chlee.design.exam01;
+
+public class ConcreteProductA implements Product {
+
+	private String name;
+
+	public ConcreteProductA(String name) {
+		this.name = name;
+	}
+
+
+	@Override
+	public void printInfo() {
+		System.out.println("Product A: " + name);
+
+	}
+
+
+}

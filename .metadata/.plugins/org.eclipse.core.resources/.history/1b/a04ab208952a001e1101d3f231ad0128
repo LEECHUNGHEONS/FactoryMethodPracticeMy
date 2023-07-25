@@ -1,0 +1,14 @@
+package com.chlee.design.exam01;
+
+import java.util.Collection;
+
+public class ProductFactory <T extends Product> implements DataProvider<T> {
+
+	@Override
+	public Collection<T> getData() {
+		
+		return products;
+	}
+	
+
+}

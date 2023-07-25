@@ -1,0 +1,11 @@
+package com.chlee.design.exam01;
+
+public class ConcreteProductB {
+	private String name;
+
+    public ConcreteProductB(String name) {
+        this.name = name;
+    }
+
+
+}

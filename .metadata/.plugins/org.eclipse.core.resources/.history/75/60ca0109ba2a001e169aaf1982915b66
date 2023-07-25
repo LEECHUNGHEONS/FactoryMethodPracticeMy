@@ -1,0 +1,30 @@
+package com.chlee.design.exam01;
+
+import java.util.Collection;
+//팩토리 메소드를 구현하였습니다.
+public class FactoryMain {
+	
+		 // (3) 람다 표현식 적용
+	    public static void printProducts(DataProvider<? extends Product> provider) {
+	        Collection<? extends Product> products = provider.getData();
+	        products.forEach(Product::printInfo);
+	    }
+
+	    public static void main(String[] args) {
+	        ProductFactory<Product> productFactory = new ProductFactory<>();
+
+	        //  콘크리트 클래스의 객체를 생성하여 팩토리에 추가합니다.
+	        productFactory.addProduct(new ConcreteProductA("야호 시험이다~!"));
+	        productFactory.addProduct(new ConcreteProductA("룰루랄라 "));
+	        productFactory.addProduct(new ConcreteProductB("60점은 넘기자~!"));
+	        productFactory.addProduct(new ConcreteProductA("부탁드립니다ㅜㅜ"));
+	        productFactory.addProduct(new ConcreteProductB("점수 잘 주세요~~"));
+	        
+
+	        // 팩토리로부터 데이터를 받아와 출력합니다.
+	        printProducts(productFactory);
+	    }
+		
+
+	}
+

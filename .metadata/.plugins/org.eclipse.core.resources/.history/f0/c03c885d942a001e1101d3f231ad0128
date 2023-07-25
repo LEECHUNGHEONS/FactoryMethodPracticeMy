@@ -1,0 +1,14 @@
+package com.chlee.design.exam01;
+
+public class ConcreteProductA implements Product {
+	
+	
+
+	@Override
+	public void printInfo() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}

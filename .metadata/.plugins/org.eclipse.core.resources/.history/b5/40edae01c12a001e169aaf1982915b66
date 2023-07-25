@@ -1,0 +1,6 @@
+package com.chlee.design.exam01;
+
+public interface Product {
+	void printInfo();
+
+}

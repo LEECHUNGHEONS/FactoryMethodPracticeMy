@@ -1,0 +1,8 @@
+package com.chlee.design.exam01;
+
+import java.util.Collection;
+
+public interface DataProvider<T> {
+	Collection<T> getData();
+
+}
